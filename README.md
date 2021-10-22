@@ -1,14 +1,7 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Highlander Battleship
- > Your author list below should include links to all members GitHub (remove existing author).
- 
  > Authors: <[Hallie Pham](https://github.com/halliehp)>  <[Samuel Ha](https://github.com/hajitae)>  <[Angelika Bermudez](https://github.com/angelikab028)>  <[Alex Hsieh](https://github.com/Potanz)>
  
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list, start thinking about the features you will implement, what design patterns can help you implement them, and why. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). Your project needs to implement at least two design patterns iteratively, which you will have to justify for later phases.The project work should be divided almost equally among team members and each member is expected to work on at least one design pattern (more than one partner may work on a pattern) and some of its test cases. You can of course help each other, but it needs to be clear who will be responsible for which patterns and for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings. While Daily Scrums are not required we highly recommend you practice them too.
- 
- > ## Expectations
+ ## Expectations
  > * Incorporate **at least two** distinct design patterns. You need to include at least *one* design pattern that we will teach this session:
  >   * Composite, Strategy, Abstract Factory or Visitor
  > * All design patterns need to be linked together (it can't be two distinct projects)
@@ -19,12 +12,17 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold one check-in meeting with your lab TA in addition to the final demo.
 
 ## Project Description
-> In a slight twist from chess game idea, we will be building a single player Battleship game.  The player will play against the computer in a game of guessing where each battleship is. <br/>
-> We plan to use C++ in this project, and for it to be text based.  The player will guess using a coordinate system. i.e. "A6" <br/>
-> However we will also be printing out a small grid to show the players guesses.  The Os will be the ship parts that the player has hit and the Xs will be the missed shots, we will try to represent each O and X with correct images of battleships being hit or missed shots in the ocean.<br/>
-> The input will be a player first being able to put their ships wherever they want to on the board with respect to the rules. The input will also be a player’s input of a coordinate on the gameboard in which they want to attack.<br/>
-> We are interested in this concept because we want to see how well a computer can do in a game that is guessing, or based on luck. We plan to have the computer guess randomly until it "hits" a players ship, then randomly guess around the area until it destroys the ship. <br/>
-> An added feature we plan to implement is being able to save and load games you have not completeed. <br/>
+> We will be building a single player Battleship game, based on the boardgame.  The player will play against the computer in a game of guessing where each battleship is. <br/>
+> We plan to use C++ for this project, and for it to be text based. We will also make use of Vim, Valgrind, Github, and GoogleTest. <br/>
+> <br/>
+> The game will start out with a small grid printing to the console to show the player where they could place their ships.  The player will input where they wish to place their ships, then will begin guessing against the computer.  The Os will be the ship parts that the player has hit and the Xs will be the missed shots.  Before every turn, the map will be printed out again to display the guesses of the player and the computer. Inputs will be taken as coordinates on the grid, for example guessing "A6." The X axis of the grid will be letters and the Y axis of the grid will be numbers.<br/> <br/>
+> We are interested in this concept because we want to see how well a computer can do in a game that is based on luck. <br/>
+> This game will offer 3 modes: easy, hard, and speed.  
+> * Easy mode will have the player playing against a computer algorithm that guesses blindly and does not react to a correct guess.  
+> * Hard mode will be using a computer algorithm that guesses randomly until it hits a correct guess, in which then it would guess around the same area to fully eliminate a ship. 
+> * Speed mode is inspired by the concept of speed chess. The player will input 5 guesses at once per turn instead of just one, and the computer will do the same. <br/>
+> 
+> Other added features we plan to implement is being able to save and load games you have not completed. We also plan on exploring the idea of adding "power ups" to the game, similar to Chance cards in Monopoly.  The player would be able to roll a chance card every few turns and if they roll a power up, they could save it to use it on later turns.  The power ups would be things like bringing back a sunk ship, or being able to change the position of a certain ship. <br/>
 
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
