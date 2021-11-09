@@ -18,27 +18,27 @@
   ![class diagram](/images/uml_diagram_final_project_cs100.jpg)
 Highlander Battleship will start at the Menu and will prompt whether to start a new game or load a previously started game. <br/>
 Gameboard will have the following public functions:<br/>
-*print_gameboard() - prints the current gameboard and the statuses of the hidden, found, and destroyed battleships.
-*clear_gameboard() - clears the current gameboard so that there are no ships on either side.
-*create_gameboard() - makes a new gameboard with the user’s and computer’s ships
+* print_gameboard() - prints the current gameboard and the statuses of the hidden, found, and destroyed battleships.
+* clear_gameboard() - clears the current gameboard so that there are no ships on either side.
+* create_gameboard() - makes a new gameboard with the user’s and computer’s ships
 The Gameboard class will inherit three classes: 
-*TurnOptions
-*PowerUps
-*Modes<br/>
+* TurnOptions
+* PowerUps
+* Modes<br/>
 TurnOptions are features that progress or end the game. This class will have the following public functions:<br/>
-	*save() - saves the current game state
-	*use_powerup() - use one of three power ups
-	*surrender() - forfeits the game
-	*game_over() - calculates whether the game is over <br/>
+	* save() - saves the current game state
+	* use_powerup() - use one of three power ups
+	* Surrender() - forfeits the game
+	* game_over() - calculates whether the game is over <br/>
 
 PowerUps will have the following public functions:<br/>
-*revive() - revives a fully sunken battleship and is placed at a random location
-*fully_destroy() - destroys an enemy battleship regardless of the size
-*reveal() - reveals the location of a single enemy battleship<br/>
+* revive() - revives a fully sunken battleship and is placed at a random location
+* fully_destroy() - destroys an enemy battleship regardless of the size
+* reveal() - reveals the location of a single enemy battleship<br/>
 
 Modes is a base class and will have the following public functions:<br/>
-	*user_turn()
-	*computer_turn() <br/>
+	* user_turn()
+	* computer_turn() <br/>
 There are three classes that will inherit the Modes base class, which are EasyMode, HardMode, and SpeedMode. The Modes class will essentially designate the difficulty and facilitate the turns between the user and the computer<br/>
 
 
