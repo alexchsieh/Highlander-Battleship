@@ -21,6 +21,7 @@ Gameboard will have the following public functions:<br/>
 * print_gameboard() - prints the current gameboard and the statuses of the hidden, found, and destroyed battleships.
 * clear_gameboard() - clears the current gameboard so that there are no ships on either side.
 * create_gameboard() - makes a new gameboard with the user’s and computer’s ships<br/>
+
 The Gameboard class will inherit three classes: 
 * TurnOptions
 * PowerUps
