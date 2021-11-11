@@ -1,7 +1,8 @@
 #include <iostream>
 #include <sstream>
-#include "board.cpp"
-#include "validity.cpp"
+#include "board.h"
+#include "validity.h"
+#include "ships.h"
 using namespace std;
 
 int main() {
