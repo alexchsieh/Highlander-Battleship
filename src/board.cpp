@@ -39,6 +39,6 @@ void Gameboard::outputMatrix(T& matrix) {
         for (int j = 0; j < column; j++) {
             std::cout << matrix[i][j] << " ";
         }
-        std::cout << endl;
+        std::cout << std::endl;
     }
 }

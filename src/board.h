@@ -3,6 +3,7 @@
 
 class Gameboard {
  public:
+    Gameboard();
     template <typename T>
     void clearMatrix(T& matrix);
     template <typename T>

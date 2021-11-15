@@ -1,12 +1,10 @@
 #include <iostream>
 #include <vector>
-#include <sstream>
 #include "board.h"
 #include "validity.h"
 using namespace std;
 
 int main() {
-    vector<int> shipSizes = {5, 4, 3, 3, 2};
     string matrix[12][12];
     string userName = "";
     int sizeInput = 0;
@@ -14,6 +12,14 @@ int main() {
     int shipValue = 0;
     int x = 0;
     int y = 0; 
+
+    vector<int> shipSizes;
+    shipSizes.push_back(5);
+    shipSizes.push_back(4);
+    shipSizes.push_back(3);
+    shipSizes.push_back(3);
+    shipSizes.push_back(2);
+
     Gameboard board;
 
     board.clearMatrix(matrix);
