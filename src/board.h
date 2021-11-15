@@ -1,8 +1,14 @@
-#include "board.cpp"
+#ifndef BOARD_H
+#define BOARD_H
 
-template <typename T>
-void clearMatrix(T& matrix);
-template <typename T>
-void grid(T& matrix);
-template <typename T>
-void outputMatrix(T& matrix);
+class Gameboard {
+ public:
+    template <typename T>
+    void clearMatrix(T& matrix);
+    template <typename T>
+    void grid(T& matrix);
+    template <typename T>
+    void outputMatrix(T& matrix);
+};
+
+#endif

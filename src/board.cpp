@@ -1,11 +1,11 @@
+#include "board.h"
 #include <iostream>
-using namespace std;
 
 const int row = 12; // default battleship row & column
 const int column = 12;
 
 template <typename T>
-void clearMatrix(T& matrix) {
+void Gameboard::clearMatrix(T& matrix) {
     for(int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             matrix[i][j] = "0";
@@ -14,7 +14,7 @@ void clearMatrix(T& matrix) {
 }
 
 template <typename T>
-void grid(T& matrix) {
+void Gameboard::grid(T& matrix) {
     for(int i = 0; i < row; i++) {
         for(int firstrow = 0; firstrow < row; firstrow++) {
             matrix[0][i] = "—";
@@ -34,11 +34,11 @@ void grid(T& matrix) {
 }
 
 template <typename T>
-void outputMatrix(T& matrix) {
+void Gameboard::outputMatrix(T& matrix) {
     for(int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
-            cout << matrix[i][j] << " ";
+            std::cout << matrix[i][j] << " ";
         }
-        cout << endl;
+        std::cout << endl;
     }
 }
