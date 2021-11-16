@@ -43,4 +43,7 @@ Modes is a base class and will have the following public functions:<br/>
 * computer_turn() - will denote how long the computer's turn based on the mode<br/>
 There are three classes that will inherit the Modes base class, which are EasyMode, HardMode, and SpeedMode. The Modes class will essentially designate the difficulty and facilitate the turns between the user and the computer<br/>
 
+## Design Patterns
+1. Composite - We chose the composite design pattern to have the game board as our main composite which contains leaves such as powerups and ships and subclasses that further the game.  Using composite, we also have a client called Menu that manipulates objects through a singular interface.  This pattern in particular was most useful to  us because in a game format, we want a player to be able to treat each object the same using an easy to access interface.  <br/>
+2. Strategy - We chose the strategy design pattern to implement multiple versions of the game.  Depending on which gamemode difficulty that the player has chosen, we will choose that specific strategy at runtime.  The default easy gamemode has subclasses hard and speed, which allows them to take the algorithm from easy and transform it into something similar, but different. We did not want the player to have to know exactly how the code works, just that the gamemodes would be in differing difficulty.  Strategy allows for us to not have to rewrite an entirely new algorithm for each gamemode. <br/>
 
