@@ -7,9 +7,9 @@ class Menu {
 		string userInput;
 	public:
 		void start_game();
-		void easy();
-		void hard();
-		void speed();
+		void select_easy();
+		void select_hard();
+		void select_speed();
 		void powerups_on_or_off();
 		void load_game();
 
