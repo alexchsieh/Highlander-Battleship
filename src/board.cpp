@@ -4,8 +4,9 @@
 const int row = 12; // default battleship row & column
 const int column = 12;
 
-template <typename T>
-void Gameboard::clearMatrix(T& matrix) {
+std::string matrix[row][column];
+
+void Gameboard::clearMatrix() {
     for(int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             matrix[i][j] = "0";
@@ -13,8 +14,7 @@ void Gameboard::clearMatrix(T& matrix) {
     }    
 }
 
-template <typename T>
-void Gameboard::grid(T& matrix) {
+void Gameboard::grid() {
     for(int i = 0; i < row; i++) {
         for(int firstrow = 0; firstrow < row; firstrow++) {
             matrix[0][i] = "—";
@@ -33,8 +33,7 @@ void Gameboard::grid(T& matrix) {
     }
 }
 
-template <typename T>
-void Gameboard::outputMatrix(T& matrix) {
+void Gameboard::outputMatrix() {
     for(int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {
             std::cout << matrix[i][j] << " ";
