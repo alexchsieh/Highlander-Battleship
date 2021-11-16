@@ -12,5 +12,6 @@ class Menu {
 		void select_speed();
 		void powerups_on_or_off();
 		void load_game();
+		int main();
 
 };
