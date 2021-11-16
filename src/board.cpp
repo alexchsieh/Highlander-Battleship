@@ -1,11 +1,6 @@
 #include "board.h"
 #include <iostream>
 
-const int row = 12; // default battleship row & column
-const int column = 12;
-
-std::string matrix[row][column];
-
 void Gameboard::clearMatrix() {
     for(int i = 0; i < row; i++) {
         for (int j = 0; j < column; j++) {

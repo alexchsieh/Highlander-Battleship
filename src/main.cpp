@@ -6,7 +6,6 @@
 using namespace std;
 
 int main() {
-    string matrix[12][12];
     string userName = "";
     int sizeInput = 0;
     char confirmation = '\0';
@@ -60,3 +59,4 @@ int main() {
     }
     return 0;
 }
+	
