@@ -1,3 +1,6 @@
+#ifndef MENU_H
+#define MENU_H
+
 #include <iostream>
 
 using namespace std;
@@ -15,3 +18,5 @@ class Menu {
 		int main();
 
 };
+
+#endif MENU_H
