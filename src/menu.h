@@ -10,7 +10,8 @@ class Menu {
 		void select_easy();
 		void select_hard();
 		void select_speed();
-		void powerups_on_or_off();
+		bool powerups_on();
+		bool powerups_off();
 		void load_game();
 		int main();
 
