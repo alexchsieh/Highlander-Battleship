@@ -1,6 +1,7 @@
 #ifndef SHIPS_H
 #define SHIPS_H
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Ship {
@@ -8,8 +9,7 @@ class Ship {
         int size;
         int numberOfHits;
         bool status;
-        //coordinates
-        //ownerSHIP
+        vector<pair<int, int> > location;
 
     public:
         int get_size();
