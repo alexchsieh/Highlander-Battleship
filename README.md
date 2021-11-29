@@ -15,7 +15,7 @@
  Other added features we plan to implement is being able to save and load games you have not completed. We also plan on exploring the idea of adding "power ups" to the game, similar to Chance cards in Monopoly.  The player would be able to roll a chance card every few turns and if they roll a power up, they could save it to use it on later turns.  The power ups would be things like bringing back a sunk ship, or being able to change the position of a certain ship. <br/>
 
 ## Class Diagram
-  ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/82ae3089976fbb5ca0ec83e7c810c5aa3ee97bae/UML%20Class%20Diagram.png)
+  ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/759e7ce609767450b4eaa20c01b42139395450dc/UML%20Class%20Diagram.png)
 Highlander Battleship will start at the Menu and will prompt whether to start a new game or load a previously started game. <br/>
 Gameboard will have the following public functions:<br/>
 * print_gameboard() - prints the current gameboard and the statuses of the hidden, found, and destroyed battleships.
