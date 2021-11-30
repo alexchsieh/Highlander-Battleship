@@ -42,7 +42,12 @@
  * *public printMenu()* - Prints the layout of the menu that the user is met with upon running the program.
  * *public chooseMode()* - Prompts the user to choose which one of three modes that they want to play.
 
-**The Main class is associated with the singleton class, Game. The Game class object is only instantiated one at a time to use the singleton design pattern. The class consists of the following constructors and functions:**
+**The client, Main class, uses the Singleton class, which instantiates one Singleton Game object at a time. The class has the following constructors and functions:**
+
+ * *private Singleton()* - Private default constructor that forces the usage of the public getter function
+ * *public static Singleton getInstance()* - Getter function which instantiates the Singleton object
+
+**The Main class is associated with and the Singleton class is dependent on the Game class, which consists of the following constructors and functions:**
 
  * *private Game()* - A private default constructor to force the usage of Game(Strategy)
  * *public Game(Strategy)* - A public constructor that instantiates a single Game object
@@ -118,5 +123,5 @@
  * *public recordHit(int, int)* - Boolean function to record a hit on a ship, return false if it is a miss, true if there is a hit
 
 ## Design Patterns
-1. Singleton - We chose the singleton design pattern with the Game class having one instantiation at one time, because there is only a single game of battleship ongoing while the program is running. Using singleton, we implemented a private default constructor for the Game class to force use a parametrized constructor of the Game class, which is Game(Strategy*), in order to create a singleton, Game, object. This pattern in particular was most useful to us because only one battleship game is being played at a time.   <br/>
+1. Singleton - We chose the singleton design pattern with the Singleton class having one instantiation of a Singleton Game object at one time, because there is only a single game of battleship ongoing while the program is running. Using singleton, we implemented a private default constructor for the Singleton class to force use a getter function, getInstance(), in order to create a Singleton Game object. This pattern in particular was most useful to us because only one battleship game is being played at a time.   <br/>
 2. Strategy - We chose the strategy design pattern to implement multiple versions of the game.  Depending on which gamemode difficulty that the player has chosen, we will choose that specific strategy at runtime.  The default easy gamemode has subclasses hard and speed, which allows them to take the algorithm from easy and transform it into something similar, but different. We did not want the player to have to know exactly how the code works, just that the gamemodes would be in differing difficulty.  Strategy allows for us to not have to rewrite an entirely new algorithm for each gamemode. <br/>
