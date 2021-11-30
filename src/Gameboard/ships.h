@@ -43,42 +43,10 @@ class Ship {
             isHorizontal = h;
         };
 
-        // copy constructor
-        Ship(const Ship &oldShip) {
-            shipSize = oldShip.getSize();
-            name = oldShip.getName();
-            shipSquares = new char[shipSize];
-            for (int i = 0; i < shipSize; i++)
-                shipSquares[i] = oldShip.shipSquares[i]; 
-            xPosition = oldShip.getX();
-            yPosition = oldShip.getY();
-            isSunk = oldShip.isShipSunk();
-            isHorizontal = oldShip.isShipHorizontal();
-        };
-
-        // copy assignment operator
-        Ship& operator=(const Ship &right) {
-            if (this != &right) {
-                shipSize = right.getSize();
-                name = right.getName();
-                xPosition = right.getX();
-                yPosition = right.getY();
-                isSunk = right.isShipSunk();
-                isHorizontal = right.isShipHorizontal();
-
-                if (shipSize > 0) // delete old memory before new memory
-                    delete [] shipSquares;
-                shipSquares = new char[shipSize];
-                for (int i = 0; i < shipSize; i++)
-                    shipSquares[i] = right.shipSquares[i]; 
-            }
-            return *this;
-        };
-
         // destructor deletes dynamically allocated memory
         ~Ship() {
-            if (shipSize > 0)
-                delete [] shipSquares;
+            //if (shipSize > 0)
+                //delete [] shipSquares;
         };
 
         // getter methods

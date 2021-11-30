@@ -16,6 +16,7 @@ class Gameboard {
         bool moveFlag = false;
 
     public:
+        ~Gameboard() {};
         Gameboard() {
             for (int i = 0; i < boardDim; i++)
                 for (int j = 0; j < boardDim; j++)
@@ -23,24 +24,6 @@ class Gameboard {
 
             for (int i = 0; i < shipCount; i++)
                 shipVec.push_back(Ship(shipLength[i], shipName[i]));
-        };
-        ~Gameboard() {};
-
-        Gameboard(const Gameboard &oldBoard) {
-            for (int i = 0; i < boardDim; i++)
-                for (int j = 0; j < boardDim; j++)
-                    gameBoard[i][j] = oldBoard.gameBoard[i][j];
-            shipVec = oldBoard.shipVec;
-        };
-
-        Gameboard& operator=(const Gameboard &right) {
-            if (this!=&right) {
-                for (int i=0; i<boardDim; i++)
-                    for (int j=0; j<boardDim; j++)
-                        gameBoard[i][j]=right.gameBoard[i][j];
-                shipVec = right.shipVec;
-            }
-            return *this;
         };
 
         int getNumHits() {

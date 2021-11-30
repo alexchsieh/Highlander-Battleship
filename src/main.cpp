@@ -49,6 +49,53 @@ bool printMenu() {
 int main() {
 	srand(time(0));
 
+	Ship myShip(5, "Carrier");
+	cout<<myShip.getName()<<endl;
+	cout<<myShip.getSize()<<endl;
+	cout<<myShip.getX()<<endl;
+	cout<<myShip.getY()<<endl;
+	cout<<myShip.isShipSunk()<<endl;
+	cout<<myShip.isShipHorizontal()<<endl;
+	myShip.setPosition(1, 1, false);
+	cout<<myShip.getName()<<endl;
+	cout<<myShip.getSize()<<endl;
+	cout<<myShip.getX()<<endl;
+	cout<<myShip.getY()<<endl;
+	cout<<myShip.isShipSunk()<<endl;
+	cout<<myShip.isShipHorizontal()<<endl;
+	myShip.printShip();
+	cout<<myShip.isShipSunk()<<endl;
+	cout<<myShip.isShipSunk()<<endl;
+	myShip.printShip();
+	//TEST ALL METHODS FOR PLAYER CLASS
+	User p1("Christina",false, 1);
+	cout<<p1.getName()<<endl;
+	cout<<p1.isPlayerAutomatic()<<endl;
+	cout<<p1.getPlayerNum()<<endl;
+	//TEST ALL METHODS FOR BOARD CLASS 
+	Gameboard b1;
+	bool test;
+	test=b1.placeShip(0, 1, 1, true);
+	cout<<"Ok placement: "<<test<<"\n";
+	test=b1.placeShip(1, 8, 1, false);
+	cout<<"Ok placement: "<<test<<"\n";
+	test=b1.placeShip(1, 1, 2, true);
+	cout<<"Ok placement: "<<test<<"\n";
+	test=b1.recordHit(1, 1);
+	test=b1.recordHit(2, 1);
+	test=b1.recordHit(3, 1);
+	test=b1.recordHit(4, 1);
+	test=b1.recordHit(5, 1);
+	test=b1.recordHit(6, 1);
+	b1.printPublicBoard();
+	b1.printPrivateBoard();
+	b1.printPublicBoard();
+	b1.printPublicBoard();
+	test=b1.recordHit(2, 2);
+	b1.printPublicBoard();
+	b1.printPrivateBoard();
+	cout<<b1.getSpaceValue(1, 1)<<"\n";
+
 	bool continueGame = true;
 
 	while (continueGame) {
