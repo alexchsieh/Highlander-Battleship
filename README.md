@@ -36,7 +36,7 @@
 ![battleship screenshot2](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/0d25a872d90a7cc9854ae1d5dbcce624f24dbafa/images/Battleship%20Screenshot2.png)
  
 ## Class Diagram
-  ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/4ca3a0d0c9560bec6d8b4e2eca3bc4fcaa8589fb/images/UML%20Class%20Diagram.png)
+  ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/6dbfee32ed22ee9f345765a1d0bcd5b0155c9f9e/images/UML%20Class%20Diagram.png)
 **Highlander Battleship will begin when the client class, our Main class, welcomes and prompts the user to choose whether to start a new game or to quit. The Main class consists of the following functions:**
 
  * *public printMenu()* - Prints the layout of the menu that the user is met with upon running the program.
