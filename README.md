@@ -11,8 +11,6 @@
  * Easy mode will have the player playing against a computer algorithm that guesses blindly and does not react to a correct guess.  
  * Hard mode will be using a computer algorithm that guesses randomly until it hits a correct guess, in which then it would guess around the same area to fully eliminate a ship. 
  * Speed mode is inspired by the concept of speed chess. The player will input 5 guesses at once per turn instead of just one, and the computer will do the same. <br/>
- 
- Other added features we plan to implement is being able to save and load games you have not completed. We also plan on exploring the idea of adding "power ups" to the game, similar to Chance cards in Monopoly.  The player would be able to roll a chance card every few turns and if they roll a power up, they could save it to use it on later turns.  The power ups would be things like bringing back a sunk ship, or being able to change the position of a certain ship. <br/>
 
 ## Class Diagram
   ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/759e7ce609767450b4eaa20c01b42139395450dc/UML%20Class%20Diagram.png)
