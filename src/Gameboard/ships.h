@@ -45,8 +45,8 @@ class Ship {
 
         // destructor deletes dynamically allocated memory
         ~Ship() {
-            //if (shipSize > 0)
-                //delete [] shipSquares;
+            if (shipSize > 0)
+                delete [] shipSquares;
         };
 
         // getter methods
