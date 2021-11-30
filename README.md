@@ -37,35 +37,6 @@
  
 ## Class Diagram
   ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/4ca3a0d0c9560bec6d8b4e2eca3bc4fcaa8589fb/images/UML%20Class%20Diagram.png)
-<<<<<<< HEAD
-Highlander Battleship will start at the Menu and will prompt whether to start a new game or load a previously started game. <br/>
-Gameboard will have the following public functions:<br/>
-* print_gameboard() - prints the current gameboard and the statuses of the hidden, found, and destroyed battleships.
-* clear_gameboard() - clears the current gameboard so that there are no ships on either side.
-* create_gameboard() - makes a new gameboard with the user’s and computer’s ships<br/>
-
-The Gameboard class will inherit three classes: 
-* TurnOptions
-* PowerUps
-* Modes<br/>
-
-TurnOptions are features that progress or end the game. This class will have the following public functions:<br/>
-* save() - saves the current game state
-* use_powerup() - use one of three power ups
-* Surrender() - forfeits the game
-* game_over() - calculates whether the game is over <br/>
-
-PowerUps will have the following public functions:<br/>
-* revive() - revives a fully sunken battleship and is placed at a random location
-* fully_destroy() - destroys an enemy battleship regardless of the size
-* reveal() - reveals the location of a single enemy battleship<br/>
-
-Modes is a base class and will have the following public functions:<br/>
-* user_turn() - will denote how long the user's turn based on the mode
-* computer_turn() - will denote how long the computer's turn based on the mode<br/>
-There are three classes that will inherit the Modes base class, which are EasyMode, HardMode, and SpeedMode. The Modes class will essentially designate the difficulty and facilitate the turns between the user and the computer<br/>
-
-=======
 **Highlander Battleship will begin when the client class, our Main class, welcomes and prompts the user to choose whether to start a new game or to quit. The Main class consists of the following functions:**
 
  * *public printMenu()* - Prints the layout of the menu that the user is met with upon running the program.
@@ -146,7 +117,6 @@ There are three classes that will inherit the Modes base class, which are EasyMo
  * *public printShip()* - Print ship to the console for visualization (only used for debugging purposes)
  * *public recordHit(int, int)* - Boolean function to record a hit on a ship, return false if it is a miss, true if there is a hit
 
->>>>>>> 6784b7f9328b39b81297955f60589f44ddc9f53a
 ## Design Patterns
 1. Singleton - We chose the singleton design pattern with the Game class having one instantiation at one time, because there is only a single game of battleship ongoing while the program is running. Using singleton, we implemented a private default constructor for the Game class to force use a parametrized constructor of the Game class, which is Game(Strategy*), in order to create a singleton, Game, object. This pattern in particular was most useful to us because only one battleship game is being played at a time.   <br/>
 2. Strategy - We chose the strategy design pattern to implement multiple versions of the game.  Depending on which gamemode difficulty that the player has chosen, we will choose that specific strategy at runtime.  The default easy gamemode has subclasses hard and speed, which allows them to take the algorithm from easy and transform it into something similar, but different. We did not want the player to have to know exactly how the code works, just that the gamemodes would be in differing difficulty.  Strategy allows for us to not have to rewrite an entirely new algorithm for each gamemode. <br/>
