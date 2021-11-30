@@ -1,6 +1,12 @@
 # Highlander Battleship
   Authors: <[Hallie Pham](https://github.com/halliehp)>  <[Samuel Ha](https://github.com/hajitae)>  <[Angelika Bermudez](https://github.com/angelikab028)>  <[Alex Hsieh](https://github.com/Potanz)>
 
+## Installation/Usage
+    1. Download the file as a zip.
+    2. Run ./a.out.
+    3. You are then first prompted to start a new game or quit
+    4. You are then prompted to choose which game mode to play.
+
 ## Project Description
  ### Purpose
  We will be building a single player Battleship game, based on the boardgame. The player will play against the computer in a game of guessing where each battleship is until all ships are sunk, leading to a win for either the player or the computer. We are interested in this concept because we want to see how well a computer can do in a game that is solely based on luck.
