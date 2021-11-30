@@ -4,7 +4,7 @@
 ## Installation/Usage
     1. Download the file as a zip.
     2. Run ./a.out.
-    3. You are then first prompted to start a new game or quit
+    3. You are then first prompted to start a new game or quit.
     4. You are then prompted to choose which game mode to play.
 
 ## Project Description
