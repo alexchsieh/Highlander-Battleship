@@ -64,6 +64,6 @@ Modes is a base class and will have the following public functions:<br/>
 * computer_turn() - will denote how long the computer's turn based on the mode<br/>
 There are three classes that will inherit the Modes base class, which are EasyMode, HardMode, and SpeedMode. The Modes class will essentially designate the difficulty and facilitate the turns between the user and the computer<br/>
 
-## Strategy Patterns
+## Design Patterns
 1. Singleton - We chose the singleton design pattern with the Game class having one instantiation at one time, because there is only a single game of battleship ongoing while the program is running. Using singleton, we implemented a private default constructor for the Game class to force use a parametrized constructor of the Game class, which is Game(Strategy*), in order to create a singleton, Game, object. This pattern in particular was most useful to us because only one battleship game is being played at a time.   <br/>
 2. Strategy - We chose the strategy design pattern to implement multiple versions of the game.  Depending on which gamemode difficulty that the player has chosen, we will choose that specific strategy at runtime.  The default easy gamemode has subclasses hard and speed, which allows them to take the algorithm from easy and transform it into something similar, but different. We did not want the player to have to know exactly how the code works, just that the gamemodes would be in differing difficulty.  Strategy allows for us to not have to rewrite an entirely new algorithm for each gamemode. <br/>
