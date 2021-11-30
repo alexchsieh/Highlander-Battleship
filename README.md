@@ -37,6 +37,7 @@
  
 ## Class Diagram
   ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/4ca3a0d0c9560bec6d8b4e2eca3bc4fcaa8589fb/images/UML%20Class%20Diagram.png)
+<<<<<<< HEAD
 Highlander Battleship will start at the Menu and will prompt whether to start a new game or load a previously started game. <br/>
 Gameboard will have the following public functions:<br/>
 * print_gameboard() - prints the current gameboard and the statuses of the hidden, found, and destroyed battleships.
@@ -64,6 +65,88 @@ Modes is a base class and will have the following public functions:<br/>
 * computer_turn() - will denote how long the computer's turn based on the mode<br/>
 There are three classes that will inherit the Modes base class, which are EasyMode, HardMode, and SpeedMode. The Modes class will essentially designate the difficulty and facilitate the turns between the user and the computer<br/>
 
+=======
+**Highlander Battleship will begin when the client class, our Main class, welcomes and prompts the user to choose whether to start a new game or to quit. The Main class consists of the following functions:**
+
+ * *public printMenu()* - Prints the layout of the menu that the user is met with upon running the program.
+ * *public chooseMode()* - Prompts the user to choose which one of three modes that they want to play.
+
+**The Main class is associated with the singleton class, Game. The Game class object is only instantiated one at a time to use the singleton design pattern. The class consists of the following constructors and functions:**
+
+ * *private Game()* - A private default constructor to force the usage of Game(Strategy)
+ * *public Game(Strategy)* - A public constructor that instantiates a single Game object
+ * *public ~Game()* - Destructor of the Game object
+ * *public setStrategy(Strategy)* - Changed the pointer that would dictate which algorithm the Game object would use at runtime
+ * *public gameInterface(int)* - Would select which algorithm the Game object would use to run the playGame() function at runtime
+
+**The Game class has a relationship of aggregation with the Strategy class. The three different modes for our Battleship game: Easy, Speed, and Hard classes inherit from the Strategy class and utilize the same functions through a strategy design pattern. These classes contain the following functions:**
+
+ * *public startGame()* - Prompts the user with inputting the player names and general setup
+ * *public playGame(int)* - Starts calling game moves
+ * *public gameModeMove(Gameboard*, *User*, *int)* - Passes in which next move according to which Gameboard, user, and mode
+ * *public printGameState(User)* - Prints both current boards
+ * *public initializeBoard(Gameboard)* - Prompts the user to enter coordinates to place their ships on the boards 
+ * *public initializeBoardAuto(Gameboard, bool)* - Automatically adds all the ships to the board
+ * *public gameCondition()* - Checks whether the game is complete or not
+ * *public getNextMove(Gameboard)* - Getter function for the next move
+ * *public getNextMoveAuto(Gameboard)* - Getter function for the next move if it is automatically
+ * *public getNextMoveSmartAuto(Gameboard)* - Getter function for the next move if it is a smart automatic move
+ * *public getSquare()* - Getter function for a square on the board
+ * *public switchPlayers(string, string)* - Function that switches between player 1 and player 2
+
+**The Strategy class is composed of the User and Gameboard classes. The User class has the following constructors and functions:**
+
+ * *public User()* - Default User constructor that assigns values when user does not input anything
+ * *public User(string, bool, int)* - User constructor that takes in a string for the name, checks whether the user is automatic with a bool, and takes in an integer for the player number
+ * *public User(const User&)* - User copy constructor
+ * *public User& operator=(const User&)* - User copy assignment operator
+ * *public getName()* - Getter function for player name
+ * *public isPlayerAutomatic()* - Boolean checker for whether the player is automatic or not
+ * *public getPlayerNum()* - Getter function for player number
+ * *public setName(string)* - Setter function for player name
+ * *public setAuto(bool)* - Setter function for whether the player is automatic or not
+ * *public setPlayerNum(int)* - Setter function for player number
+
+**The Gameboard class has the following constructors and functions:**
+
+ * *public Gameboard()* - Default Gameboard constructor 
+ * *public Gameboard(const Gameboard&)* - Gameboard copy constructor
+ * *public Gameboard& operator=(const Gameboard&)* - Gameboard copy assignment operator
+ * *public ~Gameboard()* - Destructor of the Gameboard object
+ * *public getNumHits()* - Getter function for number of hits
+ * *public printPrivateBoard()* - Prints out the opponent's board, only displays hits or misses
+ * *public printPublicBoard()* - Prints out the player’s board
+ * *public getSpaceValue(int, int)* - Getter function for the coordinate values
+ * *public recordHit(int, int)* - Record a hit on the board by attempting to record a hit on every ship, if a ship is hit, change board position to hit and return true, if no ship is hit, change board positions to miss and return false
+ * *public istheHitShipSunk(int, int)* - Boolean function that checks if the hit ship is sunk
+ * *public whichShipSunk(int, int)* - Function that checks which of the ships sunk
+ * *public saveFirstMove(int, int)* - Function that saves the first move played
+ * *public getFirstX()* - Getter function for the first x value
+ * *public getFirstY()* - Getter function for the first y value
+ * *public saveLastMove(int, int)* - Function that saves the last move played
+ * *public getLastX()* - Getter function for the last x value
+ * *public getLastY()* - Getter function for the last y value
+ * *public getFlagMove()* - Getter function for the flag move
+ * *public placeShip(int, int, bool)* - Function that places ships on the board (checks for valid coordinates and whether it is vertical or horizontal)
+
+**The Ship class is composed and contained by the Gameboard class, and is made up of the following constructors and functions:**
+
+ * *public Ship(int, string)* - Ship constructor that initializes a ship if only size and name are specified
+ * *public Ship(int, string, int, int, bool, bool)* - Ship constructor that can place a ship when it is initialized 
+ * *public Ship(const Ship)* - Ship copy constructor
+ * *public Ship& operator=(const Ship&)* - Ship copy assignment operator
+ * *public ~Ship()* - Destructor of the Ship object
+ * *public getSize()* - Getter function for the size of the ship
+ * *public getX()* - Getter function for the x value
+ * *public getY()* - Getter function for the y value
+ * *public isShipSunk()* - Boolean function that checks if the ship is sunk
+ * *public isShipHorizontal()* - Boolean function that checks if the ship is horizontal
+ * *public getName()* - Getter function for the player name
+ * *public setPosition(int, int, bool)* - Setter function for the position of a ship
+ * *public printShip()* - Print ship to the console for visualization (only used for debugging purposes)
+ * *public recordHit(int, int)* - Boolean function to record a hit on a ship, return false if it is a miss, true if there is a hit
+
+>>>>>>> 6784b7f9328b39b81297955f60589f44ddc9f53a
 ## Design Patterns
 1. Singleton - We chose the singleton design pattern with the Game class having one instantiation at one time, because there is only a single game of battleship ongoing while the program is running. Using singleton, we implemented a private default constructor for the Game class to force use a parametrized constructor of the Game class, which is Game(Strategy*), in order to create a singleton, Game, object. This pattern in particular was most useful to us because only one battleship game is being played at a time.   <br/>
 2. Strategy - We chose the strategy design pattern to implement multiple versions of the game.  Depending on which gamemode difficulty that the player has chosen, we will choose that specific strategy at runtime.  The default easy gamemode has subclasses hard and speed, which allows them to take the algorithm from easy and transform it into something similar, but different. We did not want the player to have to know exactly how the code works, just that the gamemodes would be in differing difficulty.  Strategy allows for us to not have to rewrite an entirely new algorithm for each gamemode. <br/>
