@@ -3,7 +3,7 @@
 
 ## Project Description
  ### Purpose
- We will be building a single player Battleship game, based on the boardgame. The player will play against the computer in a game of guessing where each battleship is until all ships are sunk, leading to a win for either the player or the computer. <br/  <br/>
+ We will be building a single player Battleship game, based on the boardgame. The player will play against the computer in a game of guessing where each battleship is until all ships are sunk, leading to a win for either the player or the computer.
  <br/>
  ### Tools, Languages, and Technologies
  * **C++**
@@ -19,8 +19,7 @@
    * Unit testing library
  * **Valgrind**
    * Memory debugging, memory leak detection, and profiling
-<br/  <br/>
- <br/>
+<br/>
  ### Detailed Description
  The game will start out with a small grid printing to the console to show the player where they could place their ships.  The player will input where they wish to place their ships, then will begin guessing against the computer.  The Os will be the ship parts that the player has hit and the Xs will be the missed shots.  Before every turn, the map will be printed out again to display the guesses of the player and the computer. Inputs will be taken as coordinates on the grid, for example guessing "A6." The X axis of the grid will be letters and the Y axis of the grid will be numbers.<br/> <br/>
  We are interested in this concept because we want to see how well a computer can do in a game that is based on luck. <br/>
