@@ -458,4 +458,17 @@ class Game {
 
 };
 
+class Singleton{    
+    private:
+        Strategy* strat = new Speed();
+        Game * instance = new Game(strat);
+        Singleton(){};
+
+    public:
+        static Game& getInstance()
+        {                
+            return;
+        };
+};
+
 #endif
