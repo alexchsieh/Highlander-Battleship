@@ -3,7 +3,7 @@
 
 ## Project Description
  ### Purpose
- We will be building a single player Battleship game, based on the boardgame. The player will play against the computer in a game of guessing where each battleship is until all ships are sunk, leading to a win for either the player or the computer. We are interested in this concept because we want to see how well a computer can do in a game that is based on luck. 
+ We will be building a single player Battleship game, based on the boardgame. The player will play against the computer in a game of guessing where each battleship is until all ships are sunk, leading to a win for either the player or the computer. We are interested in this concept because we want to see how well a computer can do in a game that is solely based on luck.
  ### Tools, Languages, and Technologies
  * **C++**
    * Using a command line main menu
@@ -19,11 +19,15 @@
  * **Valgrind**
    * Memory debugging, memory leak detection, and profiling
  ### Detailed Description
- The game will start out with a small grid printing to the console to show the player where they could place their ships.  The player will input where they wish to place their ships, then will begin guessing against the computer.  The Os will be the ship parts that the player has hit and the Xs will be the missed shots.  Before every turn, the map will be printed out again to display the guesses of the player and the computer. Inputs will be taken as coordinates on the grid, for example guessing "A6." The X axis of the grid will be letters and the Y axis of the grid will be numbers.<br/> <br/>
+ Upon running the program, the player will be welcomed and prompted to start a new game or quit. If the player quits, the program stops. If the player starts a new game, they will be asked to choose which game mode they would like to play. After the mode is chosen, the user is prompted with their name and player 2's name. Then, the user is asked to differentiate which player is human and which player is the computer. Afterwards, the user is able to choose whether they want their ships to be placed manually or automatically. If the player chooses the ship placement to be manually, the game will start out with a small grid printing to the console to show the player where they could place their ships, otherwise a small grid with ships already placed will be printed to the console. Then the player will begin guessing against the computer. The 'O's will be the ship parts that the player has hit and the 'X's will be the missed shots. Before every turn, the map will be printed out again to display the guesses of the player and the computer. Inputs will be taken as coordinates on the grid, for example guessing "A6". The x-axis of the grid will be letters and the y-axis of the grid will be numbers, identical to the traditional game of Battleship.<br/> <br/>
  This game will offer 3 modes: easy, hard, and speed.  
  * Easy mode will have the player playing against a computer algorithm that guesses blindly and does not react to a correct guess.  
  * Hard mode will be using a computer algorithm that guesses randomly until it hits a correct guess, in which then it would guess around the same area to fully eliminate a ship. 
  * Speed mode is inspired by the concept of speed chess. The player will input 5 guesses at once per turn instead of just one, and the computer will do the same. <br/>
+
+![battleship screenshot1](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/0d25a872d90a7cc9854ae1d5dbcce624f24dbafa/images/Battleship%20Screenshot1.png)
+
+![battleship screenshot2](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/0d25a872d90a7cc9854ae1d5dbcce624f24dbafa/images/Battleship%20Screenshot2.png)
  
 ## Class Diagram
   ![class diagram](https://github.com/cs100/final-project-hpham087-aberm028-ahsie014-sha030/blob/4ca3a0d0c9560bec6d8b4e2eca3bc4fcaa8589fb/images/UML%20Class%20Diagram.png)
