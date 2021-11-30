@@ -25,25 +25,6 @@ class User {
             playerNumber = num;
         };
 
-        // copy constructor
-        User(const User &oldPlayer) {
-            name = oldPlayer.name;
-            isAutomaticPlayer = oldPlayer.isAutomaticPlayer;
-            playerNumber = oldPlayer.playerNumber;
-
-        };
-
-        //copy assignment operator 
-        User& operator=(const User &obj) {
-            if (this != &obj) {
-                name = obj.name;
-                isAutomaticPlayer = obj.isAutomaticPlayer;
-                playerNumber = obj.playerNumber;
-            }
-
-            return *this;
-        };
-
         //getter functions (name, auto, number)
         string getName() {
             return name;
